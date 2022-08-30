@@ -1,31 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background-color: rgb(193, 193, 193);
+  padding: 100px 0;
+}
+
+button {
+  padding: 7px 15px;
+  background-color: antiquewhite;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 5px 5px 0 2px;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 5%;
+  padding: 30px;
   background-color: antiquewhite;
+}
+
+.shows h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.likes {
+  align-self: flex-end;
+}
+
+.series {
+  text-align: center;
+  width: auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+  gap: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 3%;
-  padding-left: 5%;
+  padding: 30px;
+  padding-left: 3%;
   background-color: antiquewhite;
-}
-
-.movie-collections {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-left: 10%;
 }
