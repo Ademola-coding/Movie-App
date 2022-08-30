@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -22,9 +22,9 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'src', 'index.html'),
-    },
-    port: 5080,
+    static: './dist',
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
