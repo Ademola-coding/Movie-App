@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(193, 193, 193);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  background-color: antiquewhite;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 3%;
+  padding-left: 5%;
+  background-color: antiquewhite;
+}
+
+.movie-collections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 10%;
+}
