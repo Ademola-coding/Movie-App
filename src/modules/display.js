@@ -28,4 +28,4 @@ const display = async () => {
   });
 };
 
-export { display };
+export default display;
