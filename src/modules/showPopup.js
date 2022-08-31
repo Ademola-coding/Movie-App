@@ -1,8 +1,5 @@
-// const openModalButtons = document.querySelectorAll('[data-modal-target]');
-// const closeModalButtons = document.querySelectorAll('[data-close-button]');
-// const overlay = document.getElementById('overlay');
+import display from './display.js';
 
-import display from "./display";
 let list = [];
 const getData = async () => {
   const res = await fetch('https://api.tvmaze.com/shows');
@@ -15,12 +12,11 @@ const getData = async () => {
 
 const modalDiv = document.querySelector('.popupModal');
 
-
-const showPopup = async() => {
+const showPopup = async () => {
   await display();
   await getData();
 
-  const commentBtns = document.querySelectorAll(".commentBtn");
+  const commentBtns = document.querySelectorAll('.commentBtn');
 
   commentBtns.forEach((btn, id) => {
     btn.addEventListener('click', () => {
@@ -44,18 +40,16 @@ const showPopup = async() => {
       </div>`;
 
       const closeButtons = document.querySelectorAll('.closeBtn');
-      const removebtn = document.querySelectorAll('.modal')
+      const removebtn = document.querySelectorAll('.modal');
       closeButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        removebtn.forEach((btn) => {
-          btn.classList.remove('active');
-        })
-      })
-  })
-    })
-  })
-  
-}
+        btn.addEventListener('click', () => {
+          removebtn.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+      });
+    });
+  });
+};
 
 export default showPopup;
-

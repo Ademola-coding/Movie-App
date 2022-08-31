@@ -6,7 +6,6 @@ const getData = async () => {
   for (let i = 0; i < 8; i += 1) {
     list.push(data[i]);
   }
-  console.log(list);
 };
 
 const display = async () => {
@@ -26,7 +25,7 @@ const display = async () => {
       <button type="button">Reservations</button>
     `;
     section.appendChild(div);
-});
+  });
 };
 
 export default display;
