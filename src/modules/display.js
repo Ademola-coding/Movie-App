@@ -6,6 +6,7 @@ const getData = async () => {
   for (let i = 0; i < 8; i += 1) {
     list.push(data[i]);
   }
+  console.log(list);
 };
 
 const display = async () => {
@@ -21,11 +22,11 @@ const display = async () => {
         <span style="font-size:200%;color:red; cursor:pointer;">&hearts;</span>
       </div>
       <div class="likes">likes</div>
-      <button type="button">Comments</button><br>
+      <button data-modal-target="#modal" type="button" class="commentBtn">Comments</button><br>
       <button type="button">Reservations</button>
     `;
     section.appendChild(div);
-  });
+});
 };
 
 export default display;
