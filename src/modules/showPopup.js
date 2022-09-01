@@ -26,15 +26,17 @@ const showPopup = async () => {
         <div class="showImg">
           <img src="${list[id].image.original}" alt=""/>
         </div>
-        <h2 class="showTitle">${list[id].name}</h2>
-        <div class="item-details">
-          <div>
-            <p>Genres : ${list[id].genres}</p>
-            <p>Premiered: ${list[id].premiered}</p>
-          </div>
-          <div>
-            <p>Runtime : ${list[id].runtime}</p>
-            <p>Rating : ${list[id].rating.average}</p>
+        <div class="mainInfo">
+          <h2 class="showTitle">${list[id].name}</h2>
+          <div class="item-details">
+            <div>
+              <p>Genres : ${list[id].genres}</p>
+              <p>Premiered: ${list[id].premiered}</p>
+            </div>
+            <div>
+              <p>Runtime : ${list[id].runtime}</p>
+              <p>Rating : ${list[id].rating.average}</p>
+            </div>
           </div>
         </div>
       </div>`;
