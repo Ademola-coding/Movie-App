@@ -1,4 +1,5 @@
-import display from "./display";
+import display from './display.js';
+
 class Likes {
   constructor() {
     this.URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UMc7L9k7LNIsae8S9uHs/likes';
@@ -9,9 +10,8 @@ class Likes {
     const data = await res.text();
     if (data === '') {
       return [];
-    } else {
-      return JSON.parse(data);
     }
+    return JSON.parse(data);
   }
 
   async displayLikes() {
@@ -20,8 +20,7 @@ class Likes {
     const likes = await this.getLikes();
     likes.forEach((ele) => {
       likesNum[ele.item_id - 1].innerHTML = ele.likes;
-      }
-    );
+    });
   }
 
   async addLike(id) {
@@ -44,11 +43,10 @@ class Likes {
       ele.addEventListener('click', () => {
         this.addLike(id + 1);
         likesNum[id].innerHTML = likesNum[id].innerHTML * 1 + 1;
-      })
+      });
     });
   }
 }
 const likes = new Likes();
-
 
 export default likes;

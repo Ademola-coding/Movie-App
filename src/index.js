@@ -14,9 +14,9 @@ const closePopup = async () => {
   });
 };
 
-const activateLikes = ()  => setTimeout(() => {
+const activateLikes = () => setTimeout(() => {
   likes.displayLikes();
   likes.avtivateLikeBtns();
   closePopup();
-} , 1000);
+}, 1000);
 activateLikes();
