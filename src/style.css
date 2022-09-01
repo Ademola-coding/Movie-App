@@ -68,6 +68,14 @@ header {
   align-self: stretch;
 }
 
+.heart {
+  transition: transform 0.2s ease-in-out;
+}
+
+.heart:active {
+  transform: scale(1.1);
+}
+
 footer {
   width: 100%;
   bottom: 0;
