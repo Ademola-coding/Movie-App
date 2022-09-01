@@ -5,18 +5,9 @@ import likes from './modules/likes.js';
 
 display();
 
-const closePopup = async () => {
-  await showPopup();
-  const closeBtn = document.querySelectorAll('.closeBtn');
-  closeBtn.forEach((cbtn) => {
-    cbtn.addEventListener('click', () => {
-    });
-  });
-};
-
 const activateLikes = () => setTimeout(() => {
   likes.displayLikes();
   likes.avtivateLikeBtns();
-  closePopup();
+  showPopup();
 }, 1000);
 activateLikes();
