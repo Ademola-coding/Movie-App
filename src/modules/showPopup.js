@@ -25,32 +25,35 @@ const showPopup = async () => {
     btn.addEventListener('click', () => {
       modalDiv.innerHTML = `
       <div class="modal active">
-        <button type="button" class="closeBtn">close</button>
-        <div class="showImg">
-          <img src="${list[id].image.original}" alt=""/>
+        <div class="modalMainSection">
+          <button type="button" class="closeBtn">close</button>
+          <div class="showImg">
+            <img src="${list[id].image.original}" alt=""/>
+          </div>
+          <div class="mainInfo">
+            <h2 class="showTitle">${list[id].name}</h2>
+            <div class="item-details">
+              <div>
+                <p>Genres : ${list[id].genres}</p>
+                <p>Premiered: ${list[id].premiered}</p>
+              </div>
+              <div>
+                <p>Runtime : ${list[id].runtime}</p>
+                <p>Rating : ${list[id].rating.average}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mainInfo">
-          <h2 class="showTitle">${list[id].name}</h2>
-          <div class="item-details">
-            <div>
-              <p>Genres : ${list[id].genres}</p>
-              <p>Premiered: ${list[id].premiered}</p>
-            </div>
-            <div>
-              <p>Runtime : ${list[id].runtime}</p>
-              <p>Rating : ${list[id].rating.average}</p>
-            </div>
-          </div>
-          </div>
-          <div class="commentContainer">
+        <div class="commentContainer">
+          <div>
             <h2 id="commentTitle">Comments</h2>
             <div id="commentsDisplay"></div>
+          </div>
+          <div id="form">
             <h2 id="plusComment">Add a comment</h2>
-            <div id="form">
-              <input type="text" id="username" placeholder="Your name" />
-              <input type="text" id="comment" placeholder="Add Your comment" />
-              <button type="submit" id="submitBtn">Submit</button>
-            </div>
+            <input type="text" id="username" placeholder="Your name" />
+            <input type="text" id="comment" placeholder="Add Your comment" />
+            <button type="submit" id="submitBtn">Submit</button>
           </div>
         </div>
       </div>
@@ -90,10 +93,12 @@ const showPopup = async () => {
 
         postData(`${url}${key}/comments`, dataToSend)
           .then((json) => {
-            console.log(json); // Handle success
+            // eslint-disable-next-line no-unused-expressions
+            json; // Handle success
           })
           .catch((err) => {
-            console.log(err); // Handle errors
+            // eslint-disable-next-line no-unused-expressions
+            err; // Handle errors
           });
         usernameInput.value = '';
         commentInput.value = '';
@@ -123,15 +128,10 @@ const showPopup = async () => {
             const gege = array
               .map(
                 (items) => `
-        <div class="left">
-    <p class="eachScore">${items.creation_date} 
-    <span>${items.username}:
-    </span> 
-    </p>
-    <span>
-    <p class="numberSc">${items.comment}</p>
-    </span>
-    </div>`,
+                  <div class="left">
+                    <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
+                    <span class="numberSc">${items.comment}</span></p>
+                  </div>`,
               )
               .join(' ');
             commentsDisplay.innerHTML = gege;

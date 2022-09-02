@@ -95,7 +95,9 @@ footer {
   background: greenyellow;
   border-radius: 5px;
   display: none;
-  flex-direction: row;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 
 .closeBtn {
@@ -113,8 +115,8 @@ footer {
 .showImg {
   border: solid;
   display: flex;
-  height: 90%;
-  width: 48%;
+  height: 400px;
+  width: 320px;
   margin-left: 3%;
   margin-top: 3%;
 }
@@ -154,13 +156,40 @@ p {
 
 .commentContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 5%;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 #form {
   display: flex;
   flex-direction: column;
-  padding-right: 10%;
+}
+
+.modalMainSection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.eachScore {
+  margin-bottom: 15px;
+}
+
+.commentContainer div {
+  display: flex;
+  flex-direction: column; 
+}
+
+#commentTitle {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+#plusComment {
+  margin-bottom: 20px;
+}
+
+#username, #comment {
+  margin-bottom: 15px;
 }
