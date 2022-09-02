@@ -178,7 +178,7 @@ p {
 
 .commentContainer div {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 #commentTitle {
@@ -190,6 +190,7 @@ p {
   margin-bottom: 20px;
 }
 
-#username, #comment {
+#username,
+#comment {
   margin-bottom: 15px;
 }
