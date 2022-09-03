@@ -69,11 +69,10 @@ const showPopup = async () => {
         });
       });
       const submitBtn = document.getElementById('submitBtn');
-      const idShow = 0;
 
       submitBtn.addEventListener('click', () => {
         // eslint-disable-next-line camelcase
-        const item_id = idShow;
+        const item_id = id;
         const usernameInput = document.getElementById('username');
         const commentInput = document.getElementById('comment');
         const username = usernameInput.value;
@@ -120,21 +119,26 @@ const showPopup = async () => {
       const commentsDisplay = document.getElementById('commentsDisplay');
 
       const myComments = () => {
-        getData(`${url}${key}/comments?item_id=${idShow}`).then(async (res) => {
+        getData(`${url}${key}/comments?item_id=${id}`).then(async (res) => {
           const array = await res.json();
           return array;
         })
           .then((array) => {
-            const gege = array
-              .map(
-                (items) => `
+            if (array.length > 0) {
+              const gege = array
+                .map(
+                  (items) => `
                   <div class="left">
                     <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
                     <span class="numberSc">${items.comment}</span></p>
                   </div>`,
-              )
-              .join(' ');
-            commentsDisplay.innerHTML = gege;
+                )
+                .join(' ');
+              commentsDisplay.innerHTML = gege;
+            // eslint-disable-next-line no-empty
+            } else {
+
+            }
           });
       };
       myComments();
