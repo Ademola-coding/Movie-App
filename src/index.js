@@ -6,10 +6,9 @@ import reserveAwaiting from './modules/RESERVATION.js';
 
 display();
 
-const activateLikes = () => setTimeout(() => {
+setTimeout(() => {
   likes.displayLikes();
   likes.avtivateLikeBtns();
   showPopup();
   reserveAwaiting();
 }, 1000);
-activateLikes();
