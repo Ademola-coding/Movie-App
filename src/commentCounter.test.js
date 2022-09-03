@@ -18,7 +18,11 @@ test('Comments counter test', async () => {
     <div class="left">
       <p class="eachScore">21-11-2024 <span>Neelesh:</span>
       <span class="numberSc">Love It</span></p>
+    </div>
+    <div class="left">
+      <p class="eachScore">21-11-2024 <span>Neelesh:</span>
+      <span class="numberSc">Love It</span></p>
     </div>`;
     const count = document.querySelectorAll('.left');
-    expect(commentCount(count.length)).toBe(3);
+    expect(commentCount()).toBe(4);
   });
