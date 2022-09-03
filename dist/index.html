@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e4fb871c71.js" crossorigin="anonymous"></script>
     <title>Document</title>
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
     <header>
-        <div class="logo">MOVdadta Logo</div>
-        <div class="movies">movies</div>  
-        <div class="latest">latest</div>
-        <div class="old-col">old collections</div>
+        <div class="header-container">
+            <div class="logo"><img src="../media/tvicon.png" alt="TV icon"></div>
+            <div class="movies">movies</div>  
+            <div class="latest">Latest</div>
+            <div class="old-col">Old Collections</div>
+        </div>
     </header>
     <section class="shows">
-        <h2>Upcoming Shows</h2>
+        <h2>Available Shows</h2>
         <div class="series"></div>
     </section>
     
@@ -24,11 +25,15 @@
     <div class="reservations"> </div>
 
     <!-- Comment Popup -->
-    <div class="popupModal">
+    <div class="popupModal active">
     </div>
+    <!-- activates when showing the popup -->
+    <div class="screen hidden"></div>
 
     <footer>
-        created by Microverse under CC license
+        Created by <a href="https://github.com/Peter1907">Peter Beshara</a>,
+        <a href="https://github.com/DhuruvSingh">Dhuruv Singh</a>
+        & <a href="https://github.com/Ademola-coding">Ademola Owoeye</a> under CC license.
     </footer>
 </body>
 </html>

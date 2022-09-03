@@ -5,11 +5,11 @@ import likes from './modules/likes.js';
 import reserveAwaiting from './modules/RESERVATION.js';
 
 display();
-reserveAwaiting();
 
 const activateLikes = () => setTimeout(() => {
   likes.displayLikes();
   likes.avtivateLikeBtns();
   showPopup();
+  reserveAwaiting();
 }, 1000);
 activateLikes();
