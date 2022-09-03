@@ -137,7 +137,6 @@ const showPopup = async () => {
               commentsDisplay.innerHTML = gege;
             // eslint-disable-next-line no-empty
             } else {
-
             }
           });
       };
