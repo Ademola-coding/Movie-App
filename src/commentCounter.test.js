@@ -1,9 +1,9 @@
 /**
  * @jest-environment jsdom
  */
+/* eslint-disable*/
 
-// eslint-disable-next-line import/no-unresolved
-import commentCount from './modules/commentCounter.jd';
+import commentCount from './modules/commentCounter.js';
 
 describe('Counters', () => {
   it('Comments counters', () => {
@@ -17,6 +17,6 @@ describe('Counters', () => {
   </span>
 </div>`;
     const count = document.querySelectorAll('.left');
-    expect(commentCount(count)).toBe(5);
+    expect(commentCount(count.length)).toBe(count.length);
   });
 });
