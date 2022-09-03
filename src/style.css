@@ -194,3 +194,45 @@ p {
 #comment {
   margin-bottom: 15px;
 }
+
+.reservations {
+  margin: 5%;
+  background-color: aquamarine;
+  z-index: 1000;
+  display: none;
+}
+
+.X-mark {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2%;
+}
+
+.X-icon {
+  font-size: xx-large;
+  background-color: rgb(21, 150, 84);
+  padding: 1%;
+  cursor: pointer;
+}
+
+.info-image-container {
+  display: flex;
+}
+
+.info {
+  padding-right: 5%;
+}
+
+.reserve-image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.eachImage {
+  width: 50%;
+}
+
+.movie_name {
+  text-align: center;
+}
