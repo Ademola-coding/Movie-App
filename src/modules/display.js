@@ -22,7 +22,7 @@ const display = async () => {
       </div>
       <div class="likes">likes</div>
       <button data-modal-target="#modal" type="button" class="commentBtn">Comments</button><br>
-      <button type="button">Reservations</button>
+      <button class="Reservation-btns" type="button">Reservations</button>
     `;
     section.appendChild(div);
   });
