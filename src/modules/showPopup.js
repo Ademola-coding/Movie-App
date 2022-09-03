@@ -1,4 +1,5 @@
 import display from './display.js';
+import commentCount from './commentCounter.js';
 
 let list = [];
 const getData = async () => {
@@ -141,6 +142,11 @@ const showPopup = async () => {
           });
       };
       myComments();
+      setTimeout(() => {
+        const total = commentCount();
+        const counter = document.getElementById('commentTitle');
+        counter.innerHTML = `Comments (${total})`;
+      }, 2000);
     });
   });
 };
