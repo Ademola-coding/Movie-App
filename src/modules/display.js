@@ -29,7 +29,10 @@ const display = async () => {
         <span class="num">0</span> <span>likes</span>
       </div>
       <button type="button" class="commentBtn">Comments</button><br>
-      <button type="button" class="Reservation-btns">Reservations</button>
+      <button type="button">Reservations</button>
+      <div class="likes">likes</div>
+      <button data-modal-target="#modal" type="button" class="commentBtn">Comments</button><br>
+      <button class="Reservation-btns" type="button">Reservations</button>
     `;
     section.appendChild(div);
   });
