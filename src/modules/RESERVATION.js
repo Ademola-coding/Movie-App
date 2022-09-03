@@ -3,12 +3,18 @@ import { postReservation, getReservation } from './RESERVATION-INVOLVEMENT-API.j
 
 // show Reservation Popup
 let list = [];
+
+export function getMovieList(movieID) {
+  return movieID;
+}
+
 const getData = async () => {
   const res = await fetch('https://api.tvmaze.com/shows');
   const data = await res.json();
   list = [];
   for (let i = 0; i < 8; i += 1) {
     list.push(data[i]);
+    getMovieList(list)
   }
 };
 
@@ -26,7 +32,7 @@ const reserveAwaiting = async () => {
       header.style.display = 'none';
       section.style.display = 'none';
       footer.style.display = 'none';
-      reservationshow.style.display = 'block';
+      reservationshow.style.display = 'flex';
       reservation.innerHTML = `<div class="innerReservation">
         <div class="X-mark"> <i class="fa-solid fa-x X-icon"></i>  </div>
         <div class="info-image-container">
@@ -35,12 +41,12 @@ const reserveAwaiting = async () => {
         </div>
         <div class="info">
         <h2 class="movie_name">${list[id].name}</h2> 
-        <div class="item-details">
-        <div>
+        <div class="item-detail">
+        <div class="genre-premier">
           <p>Genres : ${list[id].genres}</p>
           <p>Premiered: ${list[id].premiered}</p>
         </div>
-         <div>
+         <div class"runtime-rating">
           <p>Runtime : ${list[id].runtime}</p>
           <p>Rating : ${list[id].rating.average}</p>
          </div>
@@ -88,7 +94,7 @@ const reserveAwaiting = async () => {
         const reserveList = document.querySelector('.reservation-Data');
         const singleReserve = document.createElement('p');
         singleReserve.classList.add('eachResserve');
-        singleReserve.innerText = `${dateStart} ----- ${dateEnd}  by ${userName}`;
+        singleReserve.innerText = `${dateStart} - ${dateEnd}  by ${userName}`;
         reserveList.appendChild(singleReserve);
 
         const allReservation = document.getElementsByClassName('eachResserve');
@@ -107,3 +113,8 @@ const reserveAwaiting = async () => {
 };
 
 export default reserveAwaiting;
+
+export const reservationCounter = (movieReservation) => {
+  const ReservationCounter = movieReservation;
+  return ReservationCounter;
+};
