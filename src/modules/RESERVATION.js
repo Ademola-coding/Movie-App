@@ -1,4 +1,5 @@
 import display from './display.js';
+import { postReservation, getReservation } from './RESERVATION-INVOLVEMENT-API.js';
 
 // show Reservation Popup
 let list = [];
@@ -26,7 +27,6 @@ const reserveAwaiting = async () => {
       section.style.display = 'none';
       footer.style.display = 'none';
       reservationshow.style.display = 'block';
-
       reservation.innerHTML = `<div class="innerReservation">
         <div class="X-mark"> <i class="fa-solid fa-x X-icon"></i>  </div>
         <div class="info-image-container">
@@ -49,16 +49,18 @@ const reserveAwaiting = async () => {
        <div class="reservation-Data"> </div>
        <h4 class="add-reservation">Add a reservation</h4>
        <div class="form-container">
-       <form id="form1" action="#" >
-       <input  class="inputs id="user_name" type="text" placeholder=" Your Name">    
-       <input class="inputs id="start_date" type="datetime"  placeholder=" Start date"> 
-       <input class="inputs id="end_date" type="datetime"  placeholder=" End date">
-       <button  class="reserveBtn" type="submit"> reserve </button>
-  </form>
- </div>
- </div>
- </div>
-</div>`;
+
+       <form class="form1" id="${id}"  action="#"> 
+       <input  class="inputs" type="text" id="user_name" required placeholder=" Your Name">   
+       <input class="inputs" type="datetime" id="start_date" required  placeholder=" Start date">  
+       <input class="inputs" type="datetime" id="end_date" required  placeholder=" End date"> 
+       <button   class="reserveBtn" type="submit"> reserve </button> 
+      </form> 
+       </div>
+       </div>
+      </div>
+      </div>`;
+
       const Xmark = document.querySelectorAll('.X-icon');
       Xmark.forEach((X) => {
         X.addEventListener('click', () => {
@@ -71,6 +73,34 @@ const reserveAwaiting = async () => {
           footer.style.display = 'block';
           reservation.style.display = 'none';
         });
+      });
+
+      const form = document.querySelector('form');
+      const formId = form.getAttribute('id');
+
+      getReservation(`'${formId}'`);
+
+      form.addEventListener('submit', (e) => {
+        const userName = document.getElementById('user_name').value;
+        const dateStart = document.getElementById('start_date').value;
+        const dateEnd = document.getElementById('end_date').value;
+
+        const reserveList = document.querySelector('.reservation-Data');
+        const singleReserve = document.createElement('p');
+        singleReserve.classList.add('eachResserve');
+        singleReserve.innerText = `${dateStart} ----- ${dateEnd}  by ${userName}`;
+        reserveList.appendChild(singleReserve);
+
+        const allReservation = document.getElementsByClassName('eachResserve');
+        const count = allReservation.length;
+        const CountReserve = document.getElementsByClassName('count');
+        CountReserve[0].innerText = `(${count})`;
+        postReservation(`'${formId}'`, `${userName}`, `'${dateStart}'`, `'${dateEnd}'`);
+
+        document.getElementById('user_name').value = '';
+        document.getElementById('start_date').value = '';
+        document.getElementById('end_date').value = '';
+        e.preventDefault();
       });
     });
   });
