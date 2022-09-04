@@ -6,14 +6,20 @@
 
 ## Built With
 
-- Html, css and js
-- webpack
-- Gitflow
+- HTML, CSS and JavaScript
+- Webpack
 - Jest test framework
+- Using Gitflow
 
 ## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://github.com/Peter1907/capstone-2)
+
+## Screenshots
+
+![](media/c201.jpg)
+![](media/c202.jpg)
+![](media/c203.jpg)
 
 ### Setup
 
@@ -26,6 +32,7 @@ Download the ZIP from this location, or run the following git command to clone t
 `git clone https://github.com/Peter1907/capstone-2.git `
 - Once the files are on your machine, open the Portfolio folder in Visual Studio Code.
 - With the files open in Visual Studio Code, press the Go Live button at the bottom of the window to launch the files with Live Server.
+- You can also directly open the HTML in the "dist" directory.
 
 ## Authors
 
