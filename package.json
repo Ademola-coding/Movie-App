@@ -4,10 +4,13 @@
   "description": "Capstone Project",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "build": "webpack",
     "dev": "webpack --mode development",
-    "start": "webpack serve --open",
-    "test": "jest"
+    "start": "webpack serve --open"
+  },
+  "jest": {
+    "verbose": true
   },
   "repository": {
     "type": "git",
