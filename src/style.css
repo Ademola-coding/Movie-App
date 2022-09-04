@@ -68,6 +68,14 @@ header {
   align-self: stretch;
 }
 
+.heart {
+  transition: transform 0.2s ease-in-out;
+}
+
+.heart:active {
+  transform: scale(1.1);
+}
+
 footer {
   width: 100%;
   bottom: 0;
@@ -87,7 +95,9 @@ footer {
   background: greenyellow;
   border-radius: 5px;
   display: none;
-  flex-direction: row;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 
 .closeBtn {
@@ -105,8 +115,8 @@ footer {
 .showImg {
   border: solid;
   display: flex;
-  height: 90%;
-  width: 48%;
+  height: 400px;
+  width: 320px;
   margin-left: 3%;
   margin-top: 3%;
 }
@@ -140,6 +150,47 @@ p {
 .innerReservation {
   display: grid; 
   width: 70%;
+}
+
+.commentContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalMainSection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.eachScore {
+  margin-bottom: 15px;
+}
+
+.commentContainer div {
+  display: flex;
+  flex-direction: column;
+}
+
+#commentTitle {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+#plusComment {
+  margin-bottom: 20px;
+}
+
+#username,
+#comment {
+  margin-bottom: 15px;
 }
 
 .reservations {
