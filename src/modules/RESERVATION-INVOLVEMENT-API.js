@@ -15,7 +15,7 @@ const getReservation = (itemId) => {
     .then((res) => res.json())
     .then((data) => {
       for (let i = 0; i < data.length; i += 1) {
-        const reserveList = document.querySelector('.reservation-Data'); 
+        const reserveList = document.querySelector('.reservation-Data');
         const singleReserve = document.createElement('p');
         singleReserve.classList.add('eachResserve');
         singleReserve.innerText = `${data[i].date_start} - ${data[i].date_end}  by ${data[i].username}`;

@@ -14,7 +14,7 @@ const getData = async () => {
   list = [];
   for (let i = 0; i < 8; i += 1) {
     list.push(data[i]);
-    getMovieList(list)
+    getMovieList(list);
   }
 };
 
