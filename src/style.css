@@ -82,10 +82,6 @@ header img {
   color: #faed26;
 }
 
-.likes {
-  align-self: flex-end;
-}
-
 .series {
   text-align: center;
   width: auto;
@@ -122,8 +118,8 @@ header img {
   transition: transform 0.2s ease-out;
   color: #e2cfd2;
   filter: drop-shadow(0 0 5px #faed26);
-  font-size:200%;
-  cursor:pointer;
+  font-size: 200%;
+  cursor: pointer;
 }
 
 .heart:hover {
@@ -138,6 +134,7 @@ header img {
 
 .likes {
   color: #e2cfd2;
+  align-self: flex-end;
 }
 
 .modal {
@@ -149,7 +146,6 @@ header img {
   right: 10vw;
   min-width: 750px;
   background: #201824;
-  border-radius: 5px;
   display: none;
   flex-direction: column;
   overflow-y: scroll;
@@ -181,7 +177,6 @@ header img {
 }
 
 .modal img {
-  border-radius: 10px;
   box-shadow: 0 0 15px #e2cfd2;
   display: flex;
   height: 80vh;
@@ -205,11 +200,6 @@ header img {
 
 .active {
   display: flex;
-}
-
-img {
-  height: 100%;
-  width: 100%;
 }
 
 p {
@@ -288,7 +278,6 @@ p {
   right: 10vw;
   min-width: 750px;
   background: #201824;
-  border-radius: 5px;
   display: none;
   flex-direction: column;
   overflow-y: scroll;
@@ -328,7 +317,6 @@ p {
 }
 
 .innerReservation img {
-  border-radius: 10px;
   box-shadow: 0 0 15px #e2cfd2;
   display: flex;
   height: 80vh;
