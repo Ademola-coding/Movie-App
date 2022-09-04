@@ -19,12 +19,15 @@ const getData = async () => {
 };
 
 const reservation = document.querySelector('.reservations');
+const screen = document.querySelector('.screen');
 const reserveAwaiting = async () => {
   await display();
   await getData();
   const ReserveBtns = document.querySelectorAll('.Reservation-btns');
   ReserveBtns.forEach((btn, id) => {
     btn.addEventListener('click', () => {
+      screen.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
       const header = document.querySelector('header');
       const section = document.querySelector('section');
       const footer = document.querySelector('footer');
@@ -33,41 +36,39 @@ const reserveAwaiting = async () => {
       section.style.display = 'none';
       footer.style.display = 'none';
       reservationshow.style.display = 'flex';
-      reservation.innerHTML = `<div class="innerReservation">
-        <div class="X-mark"> <i class="fa-solid fa-x X-icon"></i>  </div>
-        <div class="info-image-container">
-        <div class="reserve-image">
-            <img src="${list[id].image.original}" class="eachImage" alt="reserve-image">
+      reservation.innerHTML = `
+      <div class="innerReservation">
+        <div class="X-mark"><button type="button" class="closeBtn">&#10008;</button>  </div>
+        <img src="${list[id].image.original}" class="eachImage" alt="reserve-image">
+        <div class="text-container">
+          <div class="info">
+            <h2 class="movie_name">${list[id].name}</h2> 
+            <div class="item-detail">
+              <p>Genres: ${list[id].genres}</p>
+              <p>Premiered: ${list[id].premiered}</p>
+              <p>Runtime: ${list[id].runtime}</p>
+              <p>Rating: ${list[id].rating.average}</p>
+            </div>
+          </div>
+          <div class="reserve-container">
+            <div class="form-container">
+              <h4 class="add-reservation">Add a reservation</h4>
+              <form class="form1" id="${id}"  action="#"> 
+                <input  class="inputs" type="text" id="user_name" required placeholder=" Your Name">   
+                <input class="inputs" type="datetime" id="start_date" required  placeholder=" Start date">  
+                <input class="inputs" type="datetime" id="end_date" required  placeholder=" End date"> 
+                <button class="reserveBtn" type="submit"> reserve </button> 
+              </form> 
+            </div>
+            <div class="reservation">
+              <h4 class="Num-of-reservation"> Reservations<Span class="count"></Span></h4>
+              <div class="reservation-Data"> </div>
+            </div>
+          </div>
         </div>
-        <div class="info">
-        <h2 class="movie_name">${list[id].name}</h2> 
-        <div class="item-detail">
-        <div class="genre-premier">
-          <p>Genres : ${list[id].genres}</p>
-          <p>Premiered: ${list[id].premiered}</p>
-        </div>
-         <div class"runtime-rating">
-          <p>Runtime : ${list[id].runtime}</p>
-          <p>Rating : ${list[id].rating.average}</p>
-         </div>
-       </div>
-       <h4 class="Num-of-reservation"> Reservations<Span class="count"></Span></h4>
-       <div class="reservation-Data"> </div>
-       <h4 class="add-reservation">Add a reservation</h4>
-       <div class="form-container">
-
-       <form class="form1" id="${id}"  action="#"> 
-       <input  class="inputs" type="text" id="user_name" required placeholder=" Your Name">   
-       <input class="inputs" type="datetime" id="start_date" required  placeholder=" Start date">  
-       <input class="inputs" type="datetime" id="end_date" required  placeholder=" End date"> 
-       <button   class="reserveBtn" type="submit"> reserve </button> 
-      </form> 
-       </div>
-       </div>
-      </div>
       </div>`;
 
-      const Xmark = document.querySelectorAll('.X-icon');
+      const Xmark = document.querySelectorAll('.X-mark');
       Xmark.forEach((X) => {
         X.addEventListener('click', () => {
           const header = document.querySelector('header');
@@ -78,6 +79,8 @@ const reserveAwaiting = async () => {
           section.style.display = 'block';
           footer.style.display = 'block';
           reservation.style.display = 'none';
+          screen.classList.add('hidden');
+          document.body.style.overflow = 'auto';
         });
       });
 
