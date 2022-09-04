@@ -9,6 +9,9 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
   },
+  "jest": {
+    "verbose": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Peter1907/capstone-2.git"
