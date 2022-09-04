@@ -13,7 +13,7 @@
 
 ## Live Demo 
 
-[Live Demo Link](https://github.com/Peter1907/capstone-2)
+[Live Demo Link](https://peter1907.github.io/capstone-2/)
 
 ## Screenshots
 
