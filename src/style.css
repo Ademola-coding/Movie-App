@@ -310,6 +310,7 @@ p {
 
 .item-detail {
   display: flex;
+  gap: 10px;
 }
 
 .info {
