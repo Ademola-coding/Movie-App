@@ -21,40 +21,43 @@ const showPopup = async () => {
   await getData();
 
   const commentBtns = document.querySelectorAll('.commentBtn');
+  const screen = document.querySelector('.screen');
 
   commentBtns.forEach((btn, id) => {
     btn.addEventListener('click', () => {
+      screen.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
       modalDiv.innerHTML = `
       <div class="modal active">
         <div class="modalMainSection">
-          <button type="button" class="closeBtn">close</button>
-          <div class="showImg">
-            <img src="${list[id].image.original}" alt=""/>
-          </div>
-          <div class="mainInfo">
-            <h2 class="showTitle">${list[id].name}</h2>
-            <div class="item-details">
-              <div>
-                <p>Genres : ${list[id].genres}</p>
-                <p>Premiered: ${list[id].premiered}</p>
-              </div>
-              <div>
-                <p>Runtime : ${list[id].runtime}</p>
-                <p>Rating : ${list[id].rating.average}</p>
+          <button type="button" class="closeBtn">&#10008;</button>
+          <img src="${list[id].image.original}" alt=""/>
+          <div class="textContent">
+            <div class="mainInfo">
+              <h2 class="showTitle">${list[id].name}</h2>
+              <div class="item-details">
+                <div>
+                  <p>Genres : ${list[id].genres}</p>
+                  <p>Premiered: ${list[id].premiered}</p>
+                </div>
+                <div>
+                  <p>Runtime : ${list[id].runtime}</p>
+                  <p>Rating : ${list[id].rating.average}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="commentContainer">
-          <div>
-            <h2 id="commentTitle">Comments</h2>
-            <div id="commentsDisplay"></div>
-          </div>
-          <div id="form">
-            <h2 id="plusComment">Add a comment</h2>
-            <input type="text" id="username" placeholder="Your name" />
-            <input type="text" id="comment" placeholder="Add Your comment" />
-            <button type="submit" id="submitBtn">Submit</button>
+            <div class="commentContainer">
+              <div id="form">
+                <h2 id="plusComment">Add a comment</h2>
+                <input type="text" id="username" placeholder="Your name" />
+                <input type="text" id="comment" placeholder="Add Your comment" />
+                <button type="submit" id="submitBtn">Submit</button>
+              </div>
+              <div>
+                <h2 id="commentTitle">Comments</h2>
+                <div id="commentsDisplay"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -67,6 +70,8 @@ const showPopup = async () => {
           removebtn.forEach((btn) => {
             btn.classList.remove('active');
           });
+          screen.classList.add('hidden');
+          document.body.style.overflow = 'auto';
         });
       });
       const submitBtn = document.getElementById('submitBtn');
