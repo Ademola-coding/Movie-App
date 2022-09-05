@@ -92,9 +92,12 @@ const showPopup = async () => {
             },
             body: data,
           });
-
+          myComments();
           return response;
         }
+        const total = commentCount();
+        const counter = document.getElementById('commentTitle');
+        counter.innerHTML = `Comments (${total + 1})`;
 
         postData(`${url}${key}/comments`, dataToSend)
           .then((json) => {
