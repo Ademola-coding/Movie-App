@@ -49,6 +49,16 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
+/***/ "./media/tvicon.png":
+/*!**************************!*\
+  !*** ./media/tvicon.png ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"4d7781b3bb14d46788bd1bc787dcfafb.png\");\n\n//# sourceURL=webpack://capstone-2/./media/tvicon.png?");
+
+/***/ }),
+
 /***/ "./src/style.css":
 /*!***********************!*\
   !*** ./src/style.css ***!
@@ -125,7 +135,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_showPopup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showPopup.js */ \"./src/modules/showPopup.js\");\n/* harmony import */ var _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/likes.js */ \"./src/modules/likes.js\");\n/* harmony import */ var _modules_RESERVATION_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/RESERVATION.js */ \"./src/modules/RESERVATION.js\");\n\n\n\n\n\n\n(0,_modules_display_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nsetTimeout(() => {\n  _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].displayLikes();\n  _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].avtivateLikeBtns();\n  (0,_modules_showPopup_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_modules_RESERVATION_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n}, 1000);\n\n//# sourceURL=webpack://capstone-2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_showPopup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showPopup.js */ \"./src/modules/showPopup.js\");\n/* harmony import */ var _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/likes.js */ \"./src/modules/likes.js\");\n/* harmony import */ var _modules_RESERVATION_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/RESERVATION.js */ \"./src/modules/RESERVATION.js\");\n/* harmony import */ var _media_tvicon_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../media/tvicon.png */ \"./media/tvicon.png\");\n\n\n\n\n\n\n\nconst logo = document.querySelector('.logo img');\nlogo.src = _media_tvicon_png__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\n\n(0,_modules_display_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nsetTimeout(() => {\n  _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].displayLikes();\n  _modules_likes_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].avtivateLikeBtns();\n  (0,_modules_showPopup_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_modules_RESERVATION_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n}, 1000);\n\n//# sourceURL=webpack://capstone-2/./src/index.js?");
 
 /***/ }),
 

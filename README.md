@@ -60,4 +60,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-A big kudos to everyone who worked hard to make this project a success.
+- A big kudos to everyone who worked hard to make this project a success.
+- Background Photo by <a href="https://unsplash.com/@fkaregan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Samuel Regan-Asante</a> on <a href="https://unsplash.com/s/photos/movies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- The logo icon designed by <a href="https://github.com/Peter1907">Peter Beshara</a>.
