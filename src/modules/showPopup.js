@@ -100,9 +100,7 @@ const showPopup = async () => {
                 <div class="left">
                 <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
                 <span class="numberSc">${items.comment}</span></p>
-                </div>`,
-                )
-                .join(' ');
+                </div>`).join('');
               commentsDisplay.innerHTML = gege;
             }
           });
