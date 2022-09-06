@@ -96,7 +96,7 @@ const showPopup = async () => {
           .then((array) => {
             if (array.length > 0) {
               const gege = array
-              .map((items) => `
+                .map((items) => `
                 <div class="left">
                 <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
                 <span class="numberSc">${items.comment}</span></p>
