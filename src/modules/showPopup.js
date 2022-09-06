@@ -75,6 +75,30 @@ const showPopup = async () => {
         });
       });
       const submitBtn = document.getElementById('submitBtn');
+      const commentsDisplay = document.getElementById('commentsDisplay');
+
+      const myComments = () => {
+        getData(`${url}${key}/comments?item_id=${id}`).then(async (res) => {
+          const array = await res.json();
+          return array;
+        })
+          .then((array) => {
+            if (array.length > 0) {
+              const gege = array
+                .map(
+                  (items) => `
+                  <div class="left">
+                    <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
+                    <span class="numberSc">${items.comment}</span></p>
+                  </div>`,
+                )
+                .join(' ');
+              commentsDisplay.innerHTML = gege;
+            } else {
+              return;
+            }
+          });
+      };
 
       submitBtn.addEventListener('click', () => {
         // eslint-disable-next-line camelcase
@@ -125,30 +149,6 @@ const showPopup = async () => {
         return response;
       }
 
-      const commentsDisplay = document.getElementById('commentsDisplay');
-
-      const myComments = () => {
-        getData(`${url}${key}/comments?item_id=${id}`).then(async (res) => {
-          const array = await res.json();
-          return array;
-        })
-          .then((array) => {
-            if (array.length > 0) {
-              const gege = array
-                .map(
-                  (items) => `
-                  <div class="left">
-                    <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
-                    <span class="numberSc">${items.comment}</span></p>
-                  </div>`,
-                )
-                .join(' ');
-              commentsDisplay.innerHTML = gege;
-            // eslint-disable-next-line no-empty
-            } else {
-            }
-          });
-      };
       myComments();
       setTimeout(() => {
         const total = commentCount();
