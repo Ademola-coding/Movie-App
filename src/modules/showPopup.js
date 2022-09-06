@@ -74,32 +74,43 @@ const showPopup = async () => {
           document.body.style.overflow = 'auto';
         });
       });
-      const submitBtn = document.getElementById('submitBtn');
-      const commentsDisplay = document.getElementById('commentsDisplay');
 
+      async function getData(url = '') {
+        const response = await fetch(url, {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+        });
+
+        return response;
+      }
+      const commentsDisplay = document.getElementById('commentsDisplay');
+      
       const myComments = () => {
         getData(`${url}${key}/comments?item_id=${id}`).then(async (res) => {
           const array = await res.json();
           return array;
         })
-          .then((array) => {
-            if (array.length > 0) {
-              const gege = array
-                .map(
-                  (items) => `
-                  <div class="left">
-                    <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
-                    <span class="numberSc">${items.comment}</span></p>
-                  </div>`,
-                )
-                .join(' ');
+        .then((array) => {
+          if (array.length > 0) {
+            const gege = array
+            .map(
+              (items) => `
+              <div class="left">
+              <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
+              <span class="numberSc">${items.comment}</span></p>
+              </div>`,
+              )
+              .join(' ');
               commentsDisplay.innerHTML = gege;
-            } else {
-              return;
-            }
+            }  
           });
-      };
-
+        };
+        
+      const submitBtn = document.getElementById('submitBtn');
       submitBtn.addEventListener('click', () => {
         // eslint-disable-next-line camelcase
         const item_id = id;
@@ -135,19 +146,6 @@ const showPopup = async () => {
         usernameInput.value = '';
         commentInput.value = '';
       });
-
-      async function getData(url = '') {
-        const response = await fetch(url, {
-          method: 'GET',
-          mode: 'cors',
-          cache: 'no-cache',
-          credentials: 'same-origin',
-          redirect: 'follow',
-          referrerPolicy: 'no-referrer',
-        });
-
-        return response;
-      }
 
       myComments();
       setTimeout(() => {
