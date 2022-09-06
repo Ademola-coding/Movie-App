@@ -94,22 +94,22 @@ const showPopup = async () => {
           const array = await res.json();
           return array;
         })
-        .then((array) => {
-          if (array.length > 0) {
-            const gege = array
-            .map(
-              (items) => `
-              <div class="left">
-              <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
-              <span class="numberSc">${items.comment}</span></p>
-              </div>`,
-              )
-              .join(' ');
+          .then((array) => {
+            if (array.length > 0) {
+              const gege = array
+              .map(
+                (items) => `
+                <div class="left">
+                <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
+                <span class="numberSc">${items.comment}</span></p>
+                </div>`,
+                )
+                .join(' ');
               commentsDisplay.innerHTML = gege;
-            }  
+            }
           });
-        };
-        
+      };
+      
       const submitBtn = document.getElementById('submitBtn');
       submitBtn.addEventListener('click', () => {
         // eslint-disable-next-line camelcase
