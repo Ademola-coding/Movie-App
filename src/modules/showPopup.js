@@ -88,7 +88,6 @@ const showPopup = async () => {
         return response;
       }
       const commentsDisplay = document.getElementById('commentsDisplay');
-      
       const myComments = () => {
         getData(`${url}${key}/comments?item_id=${id}`).then(async (res) => {
           const array = await res.json();
@@ -97,8 +96,7 @@ const showPopup = async () => {
           .then((array) => {
             if (array.length > 0) {
               const gege = array
-              .map(
-                (items) => `
+              .map((items) => `
                 <div class="left">
                 <p class="eachScore">${items.creation_date} <span>${items.username}:</span>
                 <span class="numberSc">${items.comment}</span></p>
@@ -109,7 +107,6 @@ const showPopup = async () => {
             }
           });
       };
-      
       const submitBtn = document.getElementById('submitBtn');
       submitBtn.addEventListener('click', () => {
         // eslint-disable-next-line camelcase
