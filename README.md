@@ -11,6 +11,9 @@
 - Jest test framework
 - Using Gitflow
 
+### The description of this project is here in  the video below.
+https://drive.google.com/file/d/17s0O9EkZ4fUj9UUIZm4W2kzVNdn9-1YX/view?usp=sharing
+
 ## Live Demo 
 
 [Live Demo Link](https://peter1907.github.io/capstone-2/)
