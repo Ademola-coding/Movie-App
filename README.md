@@ -16,7 +16,7 @@ https://drive.google.com/file/d/17s0O9EkZ4fUj9UUIZm4W2kzVNdn9-1YX/view?usp=shari
 
 ## Live Demo 
 
-[Live Demo Link](https://peter1907.github.io/capstone-2/)
+[Live Demo Link](https://ademola-coding.github.io/Movie-App/)
 
 ## Screenshots
 
