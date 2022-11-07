@@ -15,6 +15,10 @@
 
 [Live Demo Link](https://ademola-coding.github.io/Movie-App/)
 
+## Video Description
+
+[Description](https://ademola-coding.github.io/Movie-App/)
+
 ## Screenshots
 
 ![](media/c201.jpg)
