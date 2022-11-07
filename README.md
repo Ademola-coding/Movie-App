@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# capstone-2 Movie App
+# Movie App
 
-> This capstone shows you movies and shows using 2 APIs, one from whence we retreive the shows, and the other one Involvement API which stores and deliver comments and likes for each movie!
+> This Application shows you movies and shows using 2 APIs, one from when we retreive the shows, and the other one Involvement API which stores and deliver comments and likes for each movie!
 
 ## Built With
 
