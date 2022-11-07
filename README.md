@@ -11,9 +11,6 @@
 - Jest test framework
 - Using Gitflow
 
-### The description of this project is here in  the video below.
-[Video Description](https://ademola-coding.github.io/Movie-App)
-
 ## Live Demo 
 
 [Live Demo Link](https://ademola-coding.github.io/Movie-App/)
