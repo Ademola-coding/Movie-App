@@ -12,7 +12,7 @@
 - Using Gitflow
 
 ### The description of this project is here in  the video below.
-https://drive.google.com/file/d/17s0O9EkZ4fUj9UUIZm4W2kzVNdn9-1YX/view?usp=sharing
+[Video Description](https://ademola-coding.github.io/Movie-App)
 
 ## Live Demo 
 
